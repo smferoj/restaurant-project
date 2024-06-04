@@ -1,7 +1,24 @@
-# Vue 3 + Vite
+## json server -->
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+npm install -g json-server
 
-## Recommended IDE Setup
+db=> db.json
+{
+  "users": [
+    { "id": 1, "name": "John Doe", "email": "john@example.com" },
+    { "id": 2, "name": "Jane Doe", "email": "jane@example.com" }
+  ]
+}
 
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
+json-server --watch db.json
+
+    http://localhost:3000/users - Lists all users
+    http://localhost:3000/users/1 - Gets the user with id 1
+    http://localhost:3000/users/2 - Gets the user with id 2
+
+    GET http://localhost:3000/user1
+    GET http://localhost:3000/users
+    GET http://localhost:3000/users/1
+
+
+    <!--  can check it using postman -->
